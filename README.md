@@ -61,3 +61,42 @@ cat test.s
 The `test.s` file generated constains the code in SAYAC assembly langugage.
 
 NOTE: C standard libraries not supported yet. So do not use #include in `test.c` file
+
+
+## SAYAC Compiler Portable Package
+
+This packages contain the SAYAC compiler binaries bundled as a portable package, allowing you to use it on macOS, Linux and Windows without needing to build or install anything.
+
+---
+
+### Package Contents
+
+- `bin/clang` — C compiler to LLVM IR targeting SAYAC
+- `bin/llvm-dis` — Convert LLVM IR binary to human-readable text
+- `bin/llc` — Convert LLVM IR to SAYAC assembly
+- `lib/` — Folder containing necessary headers and libraries
+
+---
+
+## Usage on macOS
+
+### Step 1: Extract the package
+
+```bash
+tar -xzvf sayac-macos.tar.gz
+cd sayac-dist/bin
+```
+
+### Step 2: Add you test.c 
+
+
+Add your test.c file in the ./bin dirrectory.
+
+
+### Step 3: Compile your file for SAYAC
+
+```bash
+./clang -target sayac -emit-llvm -o test.bc -c test.c
+./llvm-dis test.bc
+./llc test.bc
+```

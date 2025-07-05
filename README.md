@@ -67,6 +67,8 @@ NOTE: C standard libraries not supported yet. So do not use #include in `test.c`
 
 This packages contain the SAYAC compiler binaries bundled as a portable package, allowing you to use it on macOS, Linux and Windows without needing to build or install anything.
 
+⚠️ ***IMPORTANT: You DO NOT need to clone the entire SAYAC Compiler repository to use this package. Simply download and extract the portable package, and you’re ready to go!***
+
 ---
 
 ### Package Contents

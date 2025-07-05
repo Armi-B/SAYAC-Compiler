@@ -55,7 +55,7 @@ cat test.ll
 
 2. LLVM IR to SAYAC assembly
 ```
-.build/bin/llc test.bc
+./build/bin/llc test.bc
 cat test.s
 ```
 The `test.s` file generated constains the code in SAYAC assembly langugage.
